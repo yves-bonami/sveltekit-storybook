@@ -18,6 +18,7 @@ specifiers:
   babel-loader: ^8.2.5
   eslint: ^8.12.0
   eslint-config-prettier: ^8.3.0
+  eslint-plugin-storybook: ^0.5.12
   eslint-plugin-svelte3: ^4.0.0
   prettier: ^2.5.1
   prettier-plugin-svelte: ^2.5.0
@@ -46,6 +47,7 @@ devDependencies:
   babel-loader: 8.2.5_@babel+core@7.18.2
   eslint: 8.17.0
   eslint-config-prettier: 8.5.0_eslint@8.17.0
+  eslint-plugin-storybook: 0.5.12_pm7osnb22e4oktq33hptgspr5i
   eslint-plugin-svelte3: 4.0.0_3aft6623ti3qaietkx5ojwfh2e
   prettier: 2.6.2
   prettier-plugin-svelte: 2.7.0_kkjbqzpydplecjtkxrgomroeru
@@ -3039,6 +3041,12 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/csf/0.0.1:
+    resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
+    dependencies:
+      lodash: 4.17.21
+    dev: true
+
   /@storybook/csf/0.0.2--canary.4566f4d.1:
     resolution: {integrity: sha512-9OVvMVh3t9znYZwb0Svf/YQoxX2gVOeQTGe2bses2yj+a3+OJnCrUF3/hGv6Em7KujtOdL2LL+JnG49oMVGFgQ==}
     dependencies:
@@ -3933,6 +3941,19 @@ packages:
       typescript: 4.6.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@typescript-eslint/experimental-utils/5.27.0_pm7osnb22e4oktq33hptgspr5i:
+    resolution: {integrity: sha512-ZOn342bYh19IYvkiorrqnzNoRAr91h3GiFSSfa4tlHV+R9GgR8SxCwAi8PKMyT8+pfwMxfQdNbwKsMurbF9hzg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@typescript-eslint/utils': 5.27.0_pm7osnb22e4oktq33hptgspr5i
+      eslint: 8.17.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /@typescript-eslint/parser/5.27.0_pm7osnb22e4oktq33hptgspr5i:
@@ -6494,6 +6515,21 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.17.0
+    dev: true
+
+  /eslint-plugin-storybook/0.5.12_pm7osnb22e4oktq33hptgspr5i:
+    resolution: {integrity: sha512-ojuNKnrZFrQpm5N5Lp8UR0VEn4HtLjlNn6nxQAYlmTsEXNigtId1XPuMbXAsvFcEmv3RTb5l+9tZgkhSURfACg==}
+    engines: {node: 12.x || 14.x || >= 16}
+    peerDependencies:
+      eslint: '>=6'
+    dependencies:
+      '@storybook/csf': 0.0.1
+      '@typescript-eslint/experimental-utils': 5.27.0_pm7osnb22e4oktq33hptgspr5i
+      eslint: 8.17.0
+      requireindex: 1.2.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /eslint-plugin-svelte3/4.0.0_3aft6623ti3qaietkx5ojwfh2e:
@@ -10761,6 +10797,11 @@ packages:
       is-finite: 1.1.0
     dev: true
     optional: true
+
+  /requireindex/1.2.0:
+    resolution: {integrity: sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww==}
+    engines: {node: '>=0.10.5'}
+    dev: true
 
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
